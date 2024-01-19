@@ -54,8 +54,8 @@ button:hover {
 
 .loader {
     margin-top: 1em;
-    width: 90px;
-    height: 90px;
+    width: 9%;
+    height: 12%;
     border: 9px dotted;
     border-color: #213547 #213547 transparent transparent;
     border-radius: 50%;
@@ -67,6 +67,12 @@ button:hover {
 @keyframes rotaLoader {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+.msgError {
+  font-weight: 300;
+  font-size: 1.2em;
+  color: red;
 }
 
 .msgBienvenida {

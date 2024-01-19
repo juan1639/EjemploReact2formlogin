@@ -1,7 +1,21 @@
 import { useState } from 'react'
 import './formulario-login.css'
 
-export const Bienvenido = ({logeado, setLogeado}) => {
+export const Bienvenido = ({logeado, setLogeado, cargando, setCargando}) => {
+
+    const handleLogout = () => {
+
+        if (cargando) return
+
+        setCargando(true)
+        console.log('cerrando la sesion...')
+
+        setTimeout(() => {
+            setCargando(false)
+            console.log('sesion cerrada')
+            setLogeado(['', false])
+        }, 1800)
+    }
 
     return (
         <>
@@ -21,7 +35,8 @@ export const Bienvenido = ({logeado, setLogeado}) => {
                     </section>
                 </span>
 
-                <button onClick={() => setLogeado('', false)}>Cerrar Sesión</button>
+                {!cargando && <button onClick={handleLogout}>Cerrar Sesión</button>}
+                {cargando && <span className='loader'></span>}
             </div>
         </>
     )

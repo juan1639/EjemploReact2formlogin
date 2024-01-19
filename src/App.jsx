@@ -6,13 +6,14 @@ import './App.css'
 function App() {
 
   const [logeado, setLogeado] = useState(['', false])
+  const [cargando, setCargando] = useState(false)
 
   return (
     <>
       {
         !logeado[1]
-          ? <FormularioLogin setLogeado={setLogeado}/>
-          : <Bienvenido logeado={logeado} setLogeado={setLogeado}/>
+          ? <FormularioLogin setLogeado={setLogeado} cargando={cargando} setCargando={setCargando}/>
+          : <Bienvenido logeado={logeado} setLogeado={setLogeado} cargando ={cargando} setCargando={setCargando}/>
       }
     </>
   )

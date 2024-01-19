@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import './formulario-login.css'
 
-export const FormularioLogin = ({setLogeado}) => {
+export const FormularioLogin = ({setLogeado, cargando, setCargando}) => {
 
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
     const [error, setError] = useState(false)
-    const [cargando, setCargando] = useState(false)
 
     const handleSubmit = (e) => {
 
@@ -16,7 +15,7 @@ export const FormularioLogin = ({setLogeado}) => {
 
         if ([user, pass].includes('')) {
             setError(true)
-            console.log('error! campo vacio...')
+            console.warn('error! campo vacio...')
             return
         }
 
@@ -56,6 +55,7 @@ export const FormularioLogin = ({setLogeado}) => {
                 onChange={(e) => setPass(e.target.value)}
             />
     
+            {error && <span className='msgError'>Falta introducir usuario y/o pass</span>}
             {!cargando && <button>Iniciar Sesión</button>}
             {cargando && <span className='loader'></span>}
           </form>
