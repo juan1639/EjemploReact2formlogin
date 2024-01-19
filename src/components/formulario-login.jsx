@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import './formulario-login.css'
 
-export const FormularioLogin = () => {
+export const FormularioLogin = ({setLogeado}) => {
 
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
@@ -24,9 +25,10 @@ export const FormularioLogin = () => {
         console.log('cargando...')
 
         setTimeout(() => {
+            setLogeado([user, true])
             setCargando(false)
             console.log('sesion iniciada!')
-        }, 2400)
+        }, 2800)
     }
 
     return (
@@ -54,8 +56,8 @@ export const FormularioLogin = () => {
                 onChange={(e) => setPass(e.target.value)}
             />
     
-            <button>Iniciar Sesión</button>
-    
+            {!cargando && <button>Iniciar Sesión</button>}
+            {cargando && <span className='loader'></span>}
           </form>
         </>
     )

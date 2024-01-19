@@ -5,58 +5,6 @@
   text-align: center;
 }
 
-.formulario {
-  width: 640px;
-  height: 480px;
-  min-width: 300px;
-  min-height: 240px;
-  border-radius: var(--borde);
-  background-color: #cc7;
-  padding: 1.8em 2em;
-  display: flex;
-  place-items: center;
-  flex-direction: column;
-  gap: 1.5em;
-  box-shadow: 2px 2px 5px 1px #111;
-}
-
-.formulario:hover {
-  transform: scale(1.02, 1.02);
-  box-shadow: 5px 5px 5px 2px #111;
-}
-
-input {
-  width: 60%;
-  height: 10%;
-  border: 1px solid #541;
-  border-radius: calc(var(--borde) / 2);
-  font-family: inherit;
-  font-size: 1.4em;
-  font-weight: 400;
-  padding: 0.4em 1em;
-  background-color: #ddd;
-  outline: none;
-}
-
-button {
-  border-radius: var(--borde);
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  margin-top: 1em;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: inherit;
-  color: #222;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #111;
-  transform: scale(1.05, 1.05);
-}
-
 /* .logo {
   height: 6em;
   padding: 1.5em;

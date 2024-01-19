@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --borde: 12px;
+  --avatarWidth: 120px;
+  --avatarHeight: 120px;
 }
 
 body {
